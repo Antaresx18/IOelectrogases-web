@@ -43,7 +43,7 @@ footer a:hover {
 
 /* 2) Imágenes en conocenos.html */
 .conocenos-img-peque {
-  height: 250px;
+  height: 300px;
   object-fit: cover;
 }
 .conocenos-img-grande {
