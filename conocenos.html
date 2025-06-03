@@ -17,7 +17,7 @@
   <!-- ============================
        BARRA DE NAVEGACIÓN (Header)
        ============================ -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm sticky-top">
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-oscuro sticky-top">
   <div class="container">
     <!-- Logo + Título a la izquierda -->
     <a class="navbar-brand d-flex align-items-center" href="index.html">
@@ -27,7 +27,7 @@
         style="height: 40px;"
         class="me-2"
       />
-      <span class="fs-3 fw-bold">IOELECTROGASES</span>
+      <span class="fs-3 fw-bold">IO ELECTROGASES</span>
     </a>
 
     <!-- Botón toggle (móvil) -->
@@ -77,19 +77,19 @@
   </div>
 </nav>
 
- <!-- ============================
-     SECCIÓN: Conócenos
+<!-- ============================
+     SECCIÓN: Conócenos (versión modificada)
      ============================ -->
 <section id="conocenos" class="py-5">
   <div class="container">
+    <!-- Título -->
     <h2 class="text-center fw-bold mb-5">Conócenos</h2>
 
-    <!-- “Sobre Nosotros” con 3 cartas -->
-    <div class="row g-4 justify-content-center">
-      <!-- Carta 1: Nuestra Historia -->
-      <div class="col-md-6 col-lg-4">
+    <!-- FILA 1: Carta “Nuestra Historia” centrada y más ancha -->
+    <div class="row justify-content-center mb-4">
+      <div class="col-lg-10">
         <div class="card h-100 shadow-sm">
-          <!-- Imagen en la parte superior (ahora 250px de alto) -->
+          <!-- Imagen en la parte superior (ajusta el src según tu carpeta) -->
           <img
             src="img/nh.png"
             class="card-img-top"
@@ -99,19 +99,42 @@
           <div class="card-body d-flex flex-column">
             <h5 class="card-title text-center">Nuestra Historia</h5>
             <p class="card-text flex-grow-1">
-              Desde nuestros inicios, IOELECTROGASES ha estado comprometida con la seguridad y
-              la calidad en cada revisión. A lo largo de años de experiencia, hemos crecido
-              gracias a la confianza de nuestros clientes y aliados.
+              Una empresa norte santandereana que lidera las revisiones de gas natural. La historia de Oi ElectroGases comienza en el año 2017, cuando un hombre soñador y con experiencia en los negocios, decide investigar sobre las revisiones de gas natural, encontrando que en la región no se tenía una empresa en este ámbito con sello cucuteño. 
+              Luego de tener claridad en el tema y con el deseo de formar una nueva empresa con dicho sello, decide en el año 2018 empezar a formar la primera empresa 100% norte santandereana de revisión periódica obligatoria de gas natural. Con el deseo intacto de consolidarse y fortalecerse, comienzan el proceso de acreditación ante el Organismo Nacional de Acreditación Colombiano ( ONAC), obteniendola en diciembre de ese año.
+              Para ese entonces en el año 2019 se comienzan con las primeras inspecciones, las cuales generaron gran entusiasmo y la satisfacción de tener ya palpable lo que hace unos años atrás había sido solo un sueño. 
             </p>
-            <a href="#" class="btn btn-primary mt-3">Leer más</a>
+            <img
+            src="img/nh1.png"
+            class="card-img-top"
+            alt="Nuestra Historia"
+            style="height: 400px; object-fit: cover;"
+          />
+            <p>
+              Durante el año 2020 la empresa enfrenta un gran problema de carácter mundial, la pandemia COVID por lo cual debió suspender operaciones durante tres meses, pero eso no fue un impedimento para fortalecerse y retornar con más ganas y entusiasmo. 
+              En el año 2021 se consolidó  la primera alianza con una empresa referente en muchos sectores, Centrales Eléctricas de Norte de Santander, perteneciente al Grupo de Empresas Públicas de Medellín (EPM), la cual sigue vigente. Pero no solo quisieron quedarse siendo una empresa local, sino que ese mismo año se empezaron a realizar inspecciones en el área metropolitana y en algunos municipios del departamento. 
+              Con el deseo de posicionar la empresa a nivel nacional y dar a conocer, el gran talento humano que se tiene en la región, se amplió la cobertura del servicio en el territorio nacional, por esto en el 2022 se fueron fortaleciendo y extendiendo la cobertura de las operaciones mejorando constantemente y posicionándose con transparencia y trabajo unido.
+            </p>
+             <img
+            src="img/nh2.png"
+            class="card-img-top"
+            alt="Nuestra Historia"
+            style="height: 400px; object-fit: cover;"
+          />
+          <p>
+            En el año 2023 la empresa da un giro en su gestión directiva y se cambian los accionistas pero se conserva la misma esencia y el mismo deseo de crecimiento y fortalecimiento, por ello en el 2024 se trazó como meta no solo el posicionamiento nacional sino generar a sus clientes la tranquilidad de una revisión segura, confiable y con el respaldo de la mejor calidad.
+            Hoy en día Oi ElectroGases sigue reinventándose pero manteniendo su esencia, para continuar liderando las revisiones de gas natural, además de entregar a sus clientes un servicio humano, transparente, confiable y seguro, entendiendo siempre que sus clientes y talento humano son el motor que impulsa a ser cada día mejores.
+          </p>
+            <a href="#" class="btn btn-primary mt-3 align-self-center">Leer más</a>
           </div>
         </div>
       </div>
+    </div>
 
+    <!-- FILA 2: Cartas “Misión” y “Visión” debajo, una al lado de la otra -->
+    <div class="row g-4 justify-content-center">
       <!-- Carta 2: Misión -->
-      <div class="col-md-6 col-lg-4">
+      <div class="col-md-6 col-lg-5">
         <div class="card h-100 shadow-sm">
-          <!-- Imagen en la parte superior (ahora 250px de alto) -->
           <img
             src="img/mision.png"
             class="card-img-top"
@@ -121,18 +144,16 @@
           <div class="card-body d-flex flex-column">
             <h5 class="card-title text-center">Nuestra Misión</h5>
             <p class="card-text flex-grow-1">
-              Brindar servicios de revisión y mantenimiento de GLP con total responsabilidad,
-              garantizando el cumplimiento normativo y la protección de las personas y el entorno.
+              Buscamos satisfacer las necesidades de los clientes y mejorar continuamente, realizando actividades de inspección de instalaciones que cumplan con los requisitos de las normativas de instalaciones de gas, en cualquier tipo de proyectos siguiendo los lineamientos de los reglamentos técnicos aplicables y garantizando la eficacia de nuestro sistema de gestión.
             </p>
-            <a href="#" class="btn btn-primary mt-3">Leer más</a>
+            <a href="#" class="btn btn-primary mt-3 align-self-center">Leer más</a>
           </div>
         </div>
       </div>
 
       <!-- Carta 3: Visión -->
-      <div class="col-md-6 col-lg-4">
+      <div class="col-md-6 col-lg-5">
         <div class="card h-100 shadow-sm">
-          <!-- Imagen en la parte superior (ahora 250px de alto) -->
           <img
             src="img/vision.png"
             class="card-img-top"
@@ -142,10 +163,9 @@
           <div class="card-body d-flex flex-column">
             <h5 class="card-title text-center">Nuestra Visión</h5>
             <p class="card-text flex-grow-1">
-              Ser la empresa líder en Latinoamérica en inspecciones y revisiones de instalaciones
-              de gas, reconocidos por nuestra excelencia técnica, ética y compromiso ambiental.
+              Nuestro enfoque es consolidarnos como un organismo de inspección reconocido a nivel nacional destacado por satisfacer con excelencia las necesidades de nuestros clientes, brindando soluciones y servicios de alta calidad asimismo, cumplir con los requerimientos que nos permitan transformar positivamente la industria del Norte de Santander.
             </p>
-            <a href="#" class="btn btn-primary mt-3">Leer más</a>
+            <a href="#" class="btn btn-primary mt-3 align-self-center">Leer más</a>
           </div>
         </div>
       </div>
@@ -156,72 +176,37 @@
 
 
 <!-- APARTADO ALIADOS -->
-    
 <section id="nuestrosAliados" class="py-5">
   <div class="container">
     <h2 class="text-center fw-bold mb-4">Nuestros aliados</h2>
-    <div class="row align-items-center">
-      <!-- Izquierda: carta con “20+ empresas aliadas de confianza” -->
-      <div class="col-lg-4 mb-4 mb-lg-0">
-        <div class="card h-100 text-center shadow-sm">
-          <div class="card-body d-flex flex-column justify-content-center">
-            <h3 class="display-5 text-primary mb-2">20+</h3>
-            <p class="fw-medium">empresas aliadas de confianza</p>
-          </div>
+    <!-- Agregamos justify-content-center para centrar las columnas -->
+    <div class="row justify-content-center align-items-center g-4">
+      <!-- Logo 2 -->
+      <div class="col-6 col-md-3">
+        <div class="d-flex align-items-center justify-content-center rounded shadow-sm aliado-card bg-white">
+          <img
+            src="img/colgas.png"
+            class="img-fluid aliado-img"
+            alt="Logo aliado 2"
+          />
         </div>
       </div>
 
-      <!-- Derecha: 4 logos con altura fija y centrados -->
-      <div class="col-lg-8">
-        <div class="row g-3 justify-content-center">
-          <!-- Logo 1 -->
-          <div class="col-6 col-md-3">
-            <div class="d-flex align-items-center justify-content-center rounded shadow-sm aliado-card bg-white">
-              <img
-                src="img/vanti.jpeg"
-                class="img-fluid aliado-img"
-                alt="Logo aliado 1"
-              />
-            </div>
-          </div>
-
-          <!-- Logo 2 -->
-          <div class="col-6 col-md-3">
-            <div class="d-flex align-items-center justify-content-center rounded shadow-sm aliado-card bg-white">
-              <img
-                src="img/gases.png"
-                class="img-fluid aliado-img"
-                alt="Logo aliado 2"
-              />
-            </div>
-          </div>
-
-          <!-- Logo 3 -->
-          <div class="col-6 col-md-3">
-            <div class="d-flex align-items-center justify-content-center rounded shadow-sm aliado-card bg-white">
-              <img
-                src="img/cens.png"
-                class="img-fluid aliado-img"
-                alt="Logo aliado 3"
-              />
-            </div>
-          </div>
-
-          <!-- Logo 4 -->
-          <div class="col-6 col-md-3">
-            <div class="d-flex align-items-center justify-content-center rounded shadow-sm aliado-card bg-white">
-              <img
-                src="img/alcanosc.png"
-                class="img-fluid aliado-img"
-                alt="Logo aliado 4"
-              />
-            </div>
-          </div>
+      <!-- Logo 3 -->
+      <div class="col-6 col-md-3">
+        <div class="d-flex align-items-center justify-content-center rounded shadow-sm aliado-card bg-white">
+          <img
+            src="img/cens.png"
+            class="img-fluid aliado-img"
+            alt="Logo aliado 3"
+          />
         </div>
       </div>
     </div>
   </div>
 </section>
+
+
 
 <!-- =====================
      CSS ADICIONAL (después de bootstrap.min.css)

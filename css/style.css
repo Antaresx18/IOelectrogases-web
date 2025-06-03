@@ -1,6 +1,11 @@
+/* Usando !important para asegurar que sobrescriba bg-primary de Bootstrap */
+.navbar-oscuro {
+  background-color: #001a70 !important;
+}
+
 /* ===== Estilos del footer (degradado azul) ===== */
 footer {
-  background: linear-gradient(135deg, #164a86 0%, #001a3a 100%);
+  background: linear-gradient(135deg, #0d5ea2 0%,#001a70 100%);
   color: #ffffff;
 }
 footer a {
