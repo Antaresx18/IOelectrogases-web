@@ -37,6 +37,7 @@ footer a:hover {
 /* 1) Carrusel en index.html */
 .carousel-img {
   height: 500px;
+  width: 100%;
   object-fit: cover;
 }
 
@@ -71,7 +72,9 @@ footer a:hover {
 /* 1) Para móviles (≤576px) */
 @media (max-width: 576px) {
   .carousel-img {
-    height: 300px;
+    height: auto;
+    width: 100%;
+    object-fit: cover;
   }
   .conocenos-img-peque {
     height: 180px;
@@ -91,6 +94,8 @@ footer a:hover {
 @media (min-width: 577px) and (max-width: 768px) {
   .carousel-img {
     height: 380px;
+    width: 100%;
+    object-fit: cover;
   }
   .conocenos-img-peque {
     height: 200px;
@@ -110,6 +115,8 @@ footer a:hover {
 @media (min-width: 769px) and (max-width: 992px) {
   .carousel-img {
     height: 450px;
+    width: 100%;
+    object-fit: cover;
   }
   .conocenos-img-peque {
     height: 220px;
@@ -124,3 +131,4 @@ footer a:hover {
     height: 330px;
   }
 }
+
