@@ -15,3 +15,101 @@ footer a {
 footer a:hover {
   text-decoration: underline;
 }
+
+/* ===================
+   Estilos “desktop” 
+   para conservar 
+   el tamaño original 
+   de las imágenes 
+   =================== */
+
+/* 1) Carrusel en index.html */
+.carousel-img {
+  height: 500px;
+  object-fit: cover;
+}
+
+/* 2) Imágenes en conocenos.html */
+.conocenos-img-peque {
+  height: 250px;
+  object-fit: cover;
+}
+.conocenos-img-grande {
+  height: 400px;
+  object-fit: cover;
+}
+
+/* 3) Imagen lateral en servicios.html */
+.servicio-img {
+  height: 550px;
+  object-fit: cover;
+}
+
+/* 4) Imágenes en marco_legal.html */
+.marco-img {
+  height: 380px;
+  object-fit: cover;
+}
+
+
+/* ============================
+   Ajustes responsivos 
+   para pantallas pequeñas
+   ============================ */
+
+/* 1) Para móviles (≤576px) */
+@media (max-width: 576px) {
+  .carousel-img {
+    height: 300px;
+  }
+  .conocenos-img-peque {
+    height: 180px;
+  }
+  .conocenos-img-grande {
+    height: 250px;
+  }
+  .servicio-img {
+    height: 350px;
+  }
+  .marco-img {
+    height: 250px;
+  }
+}
+
+/* 2) Para tablets pequeñas (577px – 768px) */
+@media (min-width: 577px) and (max-width: 768px) {
+  .carousel-img {
+    height: 380px;
+  }
+  .conocenos-img-peque {
+    height: 200px;
+  }
+  .conocenos-img-grande {
+    height: 300px;
+  }
+  .servicio-img {
+    height: 450px;
+  }
+  .marco-img {
+    height: 300px;
+  }
+}
+
+/* 3) Para pantallas medianas (769px – 992px) */
+@media (min-width: 769px) and (max-width: 992px) {
+  .carousel-img {
+    height: 450px;
+  }
+  .conocenos-img-peque {
+    height: 220px;
+  }
+  .conocenos-img-grande {
+    height: 350px;
+  }
+  .servicio-img {
+    height: 500px;
+  }
+  .marco-img {
+    height: 330px;
+  }
+}
