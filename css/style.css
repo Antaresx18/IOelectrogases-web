@@ -31,31 +31,27 @@ footer a:hover {
 
 /* 1) Carrusel en index.html */
 #miCarrusel {
-  width: 100vw;        /* Ocupa todo el ancho de la ventana */
-  height: 100%;        /* Mantiene la altura del contenedor/carrusel */
-  position: relative;
-  margin: 0;
+  width: 99.23vw;        /* Ocupa todo el ancho de la ventana */
+  height: auto;        /* Mantiene la altura del contenedor/carrusel */
   left: 50%;
-  right: 50%;
   transform: translateX(-50%);
   display: block;
-  overflow: hidden;
 }
 
 .carousel-inner {
   width: 100%;         /* El contenedor interno ocupa todo el ancho disponible */
-  height: 100%;        /* El contenedor se ajusta a la altura disponible */
+  height: auto;        /* El contenedor se ajusta a la altura disponible */
 }
 
 .carousel-item {
   width: 100%;         /* Cada slide ocupa todo el ancho del contenedor */
-  height: 100%;        /* La altura se ajusta al 100% */
+  height: auto;        /* La altura se ajusta automáticamente */
 }
 
 .carousel-img {
   width: 100%;         /* La imagen ocupa el 100% del ancho disponible */
-  height: 100%;        /* La imagen ocupa el 100% de la altura del carrusel */
-  object-fit: cover;   /* La imagen cubre todo el espacio disponible sin distorsionarse */
+  height: auto;        /* La imagen ocupa el 100% de la altura del carrusel */
+  object-fit: contain;   /* La imagen cubre todo el espacio disponible sin distorsionarse */
 }
 
 
@@ -80,6 +76,32 @@ footer a:hover {
    Ajustes responsivos para pantallas pequeñas
    ============================ */
 
+@media (min-width: 375px) and (max-width: 575px) {
+  #miCarrusel {
+  width: 100vw;        
+}
+  .carousel-img {
+    height: auto;
+    width: auto;
+    object-fit: contain; /* Para que las imágenes se adapten sin deformarse */
+  }
+  .conocenos-img-peque {
+    height: 180px;
+  }
+  .conocenos-img-grande {
+    height: 250px;
+  }
+  .servicio-img {
+    height: 350px;
+  }
+  .marco-img {
+    height: 250px;
+  }
+}
+
+
+
+
 /* 1) Para móviles (≤576px) */
 @media (max-width: 576px) {
   #miCarrusel {
@@ -88,7 +110,7 @@ footer a:hover {
   .carousel-img {
     height: auto;
     width: 100%;
-    object-fit: cover; /* Para que las imágenes se adapten sin deformarse */
+    object-fit: contain; 
   }
   .conocenos-img-peque {
     height: 180px;
@@ -110,9 +132,9 @@ footer a:hover {
   width: 100vw;        
 }
   .carousel-img {
-    height: 380px;
+    height: auto;
     width: 100%;
-    object-fit: cover; /* Para que las imágenes se adapten sin deformarse */
+    object-fit: contain;
   }
   .conocenos-img-peque {
     height: 200px;
@@ -134,9 +156,9 @@ footer a:hover {
   width: 100vw;        
 }
   .carousel-img {
-    height: 450px;
+    height: auto;
     width: 100%;
-    object-fit: cover; /* Para que las imágenes se adapten sin deformarse */
+    object-fit: contain; 
   }
   .conocenos-img-peque {
     height: 220px;
@@ -161,7 +183,32 @@ footer a:hover {
   width: 100vw;        
 }
   .carousel-img {
-    height: 550px;  /* Ajustamos el tamaño del carrusel */
+    height: auto;  /* Ajustamos el tamaño del carrusel */
+    object-fit: contain
+  }
+  .conocenos-img-peque {
+    height: 280px; /* Imágenes pequeñas ajustadas */
+  }
+  .conocenos-img-grande {
+    height: 380px; /* Imágenes grandes ajustadas */
+  }
+  .servicio-img {
+    height: 550px; /* Ajustamos imágenes de servicio */
+  }
+  .marco-img {
+    height: 350px; /* Ajustamos imágenes de marco legal */
+  }
+}
+
+@media (min-width: 1201px) and (max-width: 1440px) {
+ 
+  /* Ajuste adicional para pantallas medianas de computadoras y laptops */
+ #miCarrusel {
+  width: 100vw;        
+}
+  .carousel-img {
+    height: auto;  /* Ajustamos el tamaño del carrusel */
+    object-fit: contain
   }
   .conocenos-img-peque {
     height: 280px; /* Imágenes pequeñas ajustadas */
