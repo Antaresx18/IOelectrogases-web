@@ -27,46 +27,57 @@ footer a:hover {
   text-decoration: underline;
 }
 
-/* ===================
-   Estilos “desktop” 
-   para conservar 
-   el tamaño original 
-   de las imágenes 
-   =================== */
+
 
 /* 1) Carrusel en index.html */
+#miCarrusel {
+  width: 99.23vw;        /* Ocupa todo el ancho de la ventana */
+  height: 100%;        /* Mantiene la altura del contenedor/carrusel */
+  position: relative;
+  margin: 0;
+  left: 50%;
+  right: 50%;
+  transform: translateX(-50%);
+  display: block;
+  overflow: hidden;
+}
+
+.carousel-inner {
+  width: 100%;         /* El contenedor interno ocupa todo el ancho disponible */
+  height: 100%;        /* El contenedor se ajusta a la altura disponible */
+}
+
+.carousel-item {
+  width: 100%;         /* Cada slide ocupa todo el ancho del contenedor */
+  height: 100%;        /* La altura se ajusta al 100% */
+}
+
 .carousel-img {
-  height: 500px;
-  width: 100%;
-  object-fit: cover;
+  width: 100%;         /* La imagen ocupa el 100% del ancho disponible */
+  height: 100%;        /* La imagen ocupa el 100% de la altura del carrusel */
+  object-fit: cover;   /* La imagen cubre todo el espacio disponible sin distorsionarse */
 }
 
-/* 2) Imágenes en conocenos.html */
-.conocenos-img-peque {
-  height: 300px;
-  object-fit: cover;
-}
-.conocenos-img-grande {
-  height: 400px;
-  object-fit: cover;
-}
 
-/* 3) Imagen lateral en servicios.html */
-.servicio-img {
-  height: 550px;
-  object-fit: cover;
-}
 
-/* 4) Imágenes en marco_legal.html */
+
+/* Otras imágenes también se pueden modificar de manera similar */
+.conocenos-img-peque,
+.conocenos-img-grande,
+.servicio-img,
 .marco-img {
-  height: 380px;
-  object-fit: cover;
+  width: 100%;  /* Asegura que las imágenes no se recorten en el ancho */
+  height: auto;  /* Permite que las imágenes se ajusten sin perder proporción */
+  object-fit: cover;  /* Cubrirá el área pero manteniendo la relación de aspecto */
 }
-
-
+.servicio-img
+ {
+  width: 80%;  /* Asegura que las imágenes no se recorten en el ancho */
+  height: auto;  /* Permite que las imágenes se ajusten sin perder proporción */
+  object-fit: cover;  /* Cubrirá el área pero manteniendo la relación de aspecto */
+}
 /* ============================
-   Ajustes responsivos 
-   para pantallas pequeñas
+   Ajustes responsivos para pantallas pequeñas
    ============================ */
 
 /* 1) Para móviles (≤576px) */
@@ -74,7 +85,7 @@ footer a:hover {
   .carousel-img {
     height: auto;
     width: 100%;
-    object-fit: cover;
+    object-fit: cover; /* Para que las imágenes se adapten sin deformarse */
   }
   .conocenos-img-peque {
     height: 180px;
@@ -95,7 +106,7 @@ footer a:hover {
   .carousel-img {
     height: 380px;
     width: 100%;
-    object-fit: cover;
+    object-fit: cover; /* Para que las imágenes se adapten sin deformarse */
   }
   .conocenos-img-peque {
     height: 200px;
@@ -111,12 +122,12 @@ footer a:hover {
   }
 }
 
-/* 3) Para pantallas medianas (769px – 992px) */
-@media (min-width: 769px) and (max-width: 992px) {
+/* 3) Para pantallas medianas (769px – 991px) */
+@media (min-width: 769px) and (max-width: 991px) {
   .carousel-img {
     height: 450px;
     width: 100%;
-    object-fit: cover;
+    object-fit: cover; /* Para que las imágenes se adapten sin deformarse */
   }
   .conocenos-img-peque {
     height: 220px;
@@ -132,3 +143,23 @@ footer a:hover {
   }
 }
 
+
+/* 4) Para computadoras portátiles con pantallas grandes (992px a 1200px) */
+@media (min-width: 992px) and (max-width: 1200px) {
+  /* Ajuste adicional para pantallas medianas de computadoras y laptops */
+  .carousel-img {
+    height: 550px;  /* Ajustamos el tamaño del carrusel */
+  }
+  .conocenos-img-peque {
+    height: 280px; /* Imágenes pequeñas ajustadas */
+  }
+  .conocenos-img-grande {
+    height: 380px; /* Imágenes grandes ajustadas */
+  }
+  .servicio-img {
+    height: 550px; /* Ajustamos imágenes de servicio */
+  }
+  .marco-img {
+    height: 350px; /* Ajustamos imágenes de marco legal */
+  }
+}
