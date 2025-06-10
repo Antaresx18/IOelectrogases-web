@@ -31,7 +31,7 @@ footer a:hover {
 
 /* 1) Carrusel en index.html */
 #miCarrusel {
-  width: 99.23vw;        /* Ocupa todo el ancho de la ventana */
+  width: 99.245vw;        /* Ocupa todo el ancho de la ventana */
   height: 100%;        /* Mantiene la altura del contenedor/carrusel */
   position: relative;
   margin: 0;
@@ -41,6 +41,8 @@ footer a:hover {
   display: block;
   overflow: hidden;
 }
+
+
 
 .carousel-inner {
   width: 100%;         /* El contenedor interno ocupa todo el ancho disponible */
@@ -82,9 +84,13 @@ footer a:hover {
 
 /* 1) Para móviles (≤576px) */
 @media (max-width: 576px) {
+
+  #miCarrusel {
+  width: 100vw;        /* Ocupa todo el ancho de la ventana */
+}
   .carousel-img {
     height: auto;
-    width: 100%;
+    width: 100vw;
     object-fit: cover; /* Para que las imágenes se adapten sin deformarse */
   }
   .conocenos-img-peque {
@@ -103,9 +109,12 @@ footer a:hover {
 
 /* 2) Para tablets pequeñas (577px – 768px) */
 @media (min-width: 577px) and (max-width: 768px) {
+  #miCarrusel {
+  width: 100vw;        /* Ocupa todo el ancho de la ventana */
+}
   .carousel-img {
     height: 380px;
-    width: 100%;
+    width: 100vw;
     object-fit: cover; /* Para que las imágenes se adapten sin deformarse */
   }
   .conocenos-img-peque {
@@ -124,9 +133,13 @@ footer a:hover {
 
 /* 3) Para pantallas medianas (769px – 991px) */
 @media (min-width: 769px) and (max-width: 991px) {
+  
+  #miCarrusel {
+  width: 100vw;        /* Ocupa todo el ancho de la ventana */
+}
   .carousel-img {
     height: 450px;
-    width: 100%;
+    width: 100vw;
     object-fit: cover; /* Para que las imágenes se adapten sin deformarse */
   }
   .conocenos-img-peque {
@@ -147,6 +160,10 @@ footer a:hover {
 /* 4) Para computadoras portátiles con pantallas grandes (992px a 1200px) */
 @media (min-width: 992px) and (max-width: 1200px) {
   /* Ajuste adicional para pantallas medianas de computadoras y laptops */
+  
+  #miCarrusel {
+  width: 100vw;        /* Ocupa todo el ancho de la ventana */
+}
   .carousel-img {
     height: 550px;  /* Ajustamos el tamaño del carrusel */
   }
@@ -161,5 +178,29 @@ footer a:hover {
   }
   .marco-img {
     height: 350px; /* Ajustamos imágenes de marco legal */
+  }
+}
+
+/* 5) Para pantallas extra grandes (mayores a 1200px) */
+@media (min-width: 1201px) {
+  #miCarrusel {
+    width: 100vw;
+  }
+  .carousel-img {
+    height: 650px;
+    width: 100vw;
+    object-fit: cover;
+  }
+  .conocenos-img-peque {
+    height: 320px;
+  }
+  .conocenos-img-grande {
+    height: 420px;
+  }
+  .servicio-img {
+    height: 650px;
+  }
+  .marco-img {
+    height: 400px;
   }
 }
