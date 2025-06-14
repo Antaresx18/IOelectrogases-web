@@ -62,32 +62,65 @@
   <!-- ============================
        BARRA DE NAVEGACIÓN (Header)
        ============================ -->
-  <nav class="navbar navbar-expand-lg navbar-dark navbar-oscuro sticky-top">
-    <div class="container">
-      <a class="navbar-brand d-flex align-items-center" href="index.html">
-        <img src="img/logo.png" alt="IOELECTROGASES Logo" style="height: 40px;" class="me-2" />
-        <span class="fs-4 fw-bold">OI ELECTROGASES</span>
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbarServicios" aria-controls="mainNavbarServicios" aria-expanded="false" aria-label="Abrir menú de navegación">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="mainNavbarServicios">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
-          <li class="nav-item"><a class="nav-link" href="conocenos.html">Conócenos</a></li>
-          <li class="nav-item"><a class="nav-link active" aria-current="page" href="servicios.html">Servicios</a></li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownServicios" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Más
-            </a>
-            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownServicios">
-              <li><a class="dropdown-item" href="marco_legal.html">Marco legal</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
+<nav class="navbar navbar-expand-lg navbar-dark navbar-oscuro sticky-top">
+  <div class="container">
+    <!-- Logo + Título a la izquierda -->
+    <a class="navbar-brand d-flex align-items-center" href="index.html">
+      <img
+        src="img/logo.png"
+        alt="IOELECTROGASES Logo"
+        style="height: 80px;"
+        class="me-2"
+      />
+      <span class="fs-3 fw-bold" style="color: white;">OI ELECTRO</span><span class="fs-3 fw-bold" style="color: red;">GASES</span>
+    </a>
+
+    <!-- Botón toggle (móvil) -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#mainNavbar"
+      aria-controls="mainNavbar"
+      aria-expanded="false"
+      aria-label="Abrir menú de navegación"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Ítems del menú -->
+    <div class="collapse navbar-collapse" id="mainNavbar">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="conocenos.html">Conócenos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="servicios.html">Servicios</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Más
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+            <li>
+              <a class="dropdown-item" href="marco_legal.html">Marco legal</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
     </div>
-  </nav>
+  </div>
+</nav>
 
   <!-- ================================
        SECCIÓN 1: Servicio al Cliente

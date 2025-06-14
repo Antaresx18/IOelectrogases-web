@@ -17,17 +17,17 @@
   <!-- ============================
        BARRA DE NAVEGACIÓN (Header)
        ============================ -->
-  <nav class="navbar navbar-expand-lg navbar-dark navbar-oscuro sticky-top">
+<nav class="navbar navbar-expand-lg navbar-dark navbar-oscuro sticky-top">
   <div class="container">
     <!-- Logo + Título a la izquierda -->
     <a class="navbar-brand d-flex align-items-center" href="index.html">
       <img
         src="img/logo.png"
         alt="IOELECTROGASES Logo"
-        style="height: 40px;"
+        style="height: 80px;"
         class="me-2"
       />
-      <span class="fs-3 fw-bold">OI ELECTROGASES</span>
+      <span class="fs-3 fw-bold" style="color: white;">OI ELECTRO</span><span class="fs-3 fw-bold" style="color: red;">GASES</span>
     </a>
 
     <!-- Botón toggle (móvil) -->
@@ -103,18 +103,19 @@
               Luego de tener claridad en el tema y con el deseo de formar una nueva empresa con dicho sello, decide en el año 2018 empezar a formar la primera empresa 100% norte santandereana de revisión periódica obligatoria de gas natural. Con el deseo intacto de consolidarse y fortalecerse, comienzan el proceso de acreditación ante el Organismo Nacional de Acreditación Colombiano ( ONAC), obteniendola en diciembre de ese año.
               Para ese entonces en el año 2019 se comienzan con las primeras inspecciones, las cuales generaron gran entusiasmo y la satisfacción de tener ya palpable lo que hace unos años atrás había sido solo un sueño. 
             </p>
+            <div id="contenidoExtra" style="display: none;">
             <img
-+             src="img/nh1.png"
-+             class="card-img-top conocenos-img-grande"
-+             alt="Nuestra Historia"
-+           />
+              src="img/nh1.png"
+              class="card-img-top conocenos-img-grande"
+              alt="Nuestra Historia"
+            />
             <p>
               Durante el año 2020 la empresa enfrenta un gran problema de carácter mundial, la pandemia COVID por lo cual debió suspender operaciones durante tres meses, pero eso no fue un impedimento para fortalecerse y retornar con más ganas y entusiasmo. 
               En el año 2021 se consolidó  la primera alianza con una empresa referente en muchos sectores, Centrales Eléctricas de Norte de Santander, perteneciente al Grupo de Empresas Públicas de Medellín (EPM), la cual sigue vigente. Pero no solo quisieron quedarse siendo una empresa local, sino que ese mismo año se empezaron a realizar inspecciones en el área metropolitana y en algunos municipios del departamento. 
               Con el deseo de posicionar la empresa a nivel nacional y dar a conocer, el gran talento humano que se tiene en la región, se amplió la cobertura del servicio en el territorio nacional, por esto en el 2022 se fueron fortaleciendo y extendiendo la cobertura de las operaciones mejorando constantemente y posicionándose con transparencia y trabajo unido.
             </p>
              <img
-+             src="img/nh1.png"
++             src="img/nh2.png"
 +             class="card-img-top conocenos-img-grande"
 +             alt="Nuestra Historia"
 +           />
@@ -122,7 +123,8 @@
             En el año 2023 la empresa da un giro en su gestión directiva y se cambian los accionistas pero se conserva la misma esencia y el mismo deseo de crecimiento y fortalecimiento, por ello en el 2024 se trazó como meta no solo el posicionamiento nacional sino generar a sus clientes la tranquilidad de una revisión segura, confiable y con el respaldo de la mejor calidad.
             Hoy en día Oi ElectroGases sigue reinventándose pero manteniendo su esencia, para continuar liderando las revisiones de gas natural, además de entregar a sus clientes un servicio humano, transparente, confiable y seguro, entendiendo siempre que sus clientes y talento humano son el motor que impulsa a ser cada día mejores.
           </p>
-            <a href="#" class="btn btn-primary mt-3 align-self-center">Leer más</a>
+            </div>
+             <a href="javascript:void(0)" class="btn btn-primary mt-3 align-self-center" id="botonLeerMas" onclick="toggleContenido()">Leer más</a>
           </div>
         </div>
       </div>
@@ -295,5 +297,20 @@
 
   <!-- === BOOTSTRAP JS LOCAL === -->
   <script src="js/bootstrap.bundle.min.js"></script>
+  <script>
+  function toggleContenido() {
+    const contenido = document.getElementById("contenidoExtra");
+    const boton = document.getElementById("botonLeerMas");
+
+    if (contenido.style.display === "none") {
+      contenido.style.display = "block";
+      boton.textContent = "Leer menos";
+    } else {
+      contenido.style.display = "none";
+      boton.textContent = "Leer más";
+    }
+  }
+</script>
+  </script>
 </body>
 </html>
