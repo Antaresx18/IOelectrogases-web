@@ -1,0 +1,43 @@
+# Configuración de Netlify para OI ELECTROGASES
+# Este archivo es opcional pero recomendado para optimizar el despliegue
+
+[build]
+  # Netlify detectará automáticamente que es un sitio estático
+  # No necesitas comandos de build para este proyecto
+
+# Configuración de headers HTTP
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+# Headers específicos para archivos estáticos (CSS, JS)
+[[headers]]
+  for = "/css/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/js/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/img/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/webfonts/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Redirecciones (si las necesitas en el futuro)
+# [[redirects]]
+#   from = "/old-page"
+#   to = "/new-page"
+#   status = 301
+

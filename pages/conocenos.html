@@ -3,79 +3,50 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>OI ELECTROGASES – Conócenos</title>
+  
+  <!-- SEO Meta Tags -->
+  <title>OI ELECTROGASES – Conócenos | Historia, Misión y Visión</title>
+  <meta name="description" content="Conoce la historia de OI ELECTROGASES, nuestra misión, visión y valores. Empresa certificada especializada en revisiones periódicas obligatorias de gas natural en Colombia." />
+  <meta name="keywords" content="OI ELECTROGASES historia, misión visión empresa gas, revisión gas Colombia, empresa certificada ONAC" />
+  <meta name="author" content="OI ELECTROGASES" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.oielectrogases.com/pages/conocenos.html" />
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.oielectrogases.com/pages/conocenos.html" />
+  <meta property="og:title" content="OI ELECTROGASES - Conócenos | Historia, Misión y Visión" />
+  <meta property="og:description" content="Conoce la historia de OI ELECTROGASES, nuestra misión, visión y valores. Empresa certificada especializada en revisiones periódicas obligatorias de gas natural." />
+  <meta property="og:image" content="https://www.oielectrogases.com/img/logo.png" />
+  <meta property="og:site_name" content="OI ELECTROGASES" />
+  <meta property="og:locale" content="es_CO" />
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://www.oielectrogases.com/pages/conocenos.html" />
+  <meta name="twitter:title" content="OI ELECTROGASES - Conócenos" />
+  <meta name="twitter:description" content="Conoce la historia, misión y visión de OI ELECTROGASES. Empresa certificada especializada en revisiones periódicas obligatorias de gas natural." />
+  <meta name="twitter:image" content="https://www.oielectrogases.com/img/logo.png" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="../img/logo.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="../img/logo.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../img/logo.png" />
+  <link rel="shortcut icon" href="../img/logo.png" />
 
   <!-- === BOOTSTRAP CSS LOCAL === -->
-  <link rel="stylesheet" href="CSS/bootstrap.min.css" />
+  <link rel="stylesheet" href="../css/bootstrap.min.css" />
 
    <!-- 2) FontAwesome CSS local -->
   <!-- Aquí enlazamos al all.min.css que está dentro de tu carpeta css/ -->
-  <link rel="stylesheet" href="css/all.min.css" />
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="../css/all.min.css" />
+  <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
   <!-- ============================
-       BARRA DE NAVEGACIÓN (Header)
+       BARRA DE NAVEGACIÓN (Header) - Componente dinámico
        ============================ -->
-<nav class="navbar navbar-expand-lg navbar-dark navbar-oscuro sticky-top">
-  <div class="container">
-    <!-- Logo + Título a la izquierda -->
-    <a class="navbar-brand d-flex align-items-center" href="index.html">
-      <img
-        src="img/logo.png"
-        alt="IOELECTROGASES Logo"
-        style="height: 80px;"
-        class="me-2"
-      />
-      <span class="fs-3 fw-bold" style="color: white;">OI ELECTRO</span><span class="fs-3 fw-bold" style="color: #e62920;">GASES</span>
-    </a>
-
-    <!-- Botón toggle (móvil) -->
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#mainNavbar"
-      aria-controls="mainNavbar"
-      aria-expanded="false"
-      aria-label="Abrir menú de navegación"
-    >
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <!-- Ítems del menú -->
-    <div class="collapse navbar-collapse" id="mainNavbar">
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="conocenos.html">Conócenos</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="servicios.html">Servicios</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a
-            class="nav-link dropdown-toggle"
-            href="#"
-            id="navbarDropdown"
-            role="button"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
-            Más
-          </a>
-          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-            <li>
-              <a class="dropdown-item" href="marco_legal.html">Marco legal</a>
-            </li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
+  <div id="navbar-container"></div>
 
 <!-- ============================
      SECCIÓN: Conócenos (versión modificada)
@@ -83,7 +54,7 @@
 <section id="conocenos" class="py-5">
   <div class="container">
     <!-- Título -->
-    <h2 class="text-center fw-bold mb-5" style="font-size: 60px;">Conócenos</h2>
+    <h2 class="text-center fw-bold mb-5 titulo-grande">Conócenos</h2>
 
     <!-- FILA 1: Carta “Nuestra Historia” centrada y más ancha -->
     <div class="row justify-content-center mb-4">
@@ -91,7 +62,7 @@
         <div class="card h-100 shadow-sm">
           <!-- Imagen en la parte superior (ajusta el src según tu carpeta) -->
           <img
-            src="img/nh.png"
+            src="../img/nh.png"
             class="card-img-top"
             alt="Nuestra Historia"
             style="height: 250px; object-fit: cover;"
@@ -108,9 +79,10 @@ Para ese entonces en el año 2019 se comienzan con las primeras inspecciones, la
             </p>
             <div id="contenidoExtra" style="display: none;">
             <img
-              src="img/nh1.png"
+              src="../img/nh1.png"
               class="card-img-top conocenos-img-grande"
               alt="Nuestra Historia"
+              loading="lazy"
             />
             <p style="text-align: justify;">
               Durante el año 2020 la empresa enfrenta un gran problema de carácter mundial, la pandemia COVID por lo cual debió suspender operaciones durante tres meses, pero eso no fue un impedimento para fortalecerse y retornar con más ganas y entusiasmo. 
@@ -121,10 +93,11 @@ Con el deseo de posicionar la empresa a nivel nacional y dar a conocer, el gran 
 
             </p>
              <img
-+             src="img/nh2.png"
-+             class="card-img-top conocenos-img-grande"
-+             alt="Nuestra Historia"
-+           />
+              src="../img/nh2.png"
+              class="card-img-top conocenos-img-grande"
+              alt="Nuestra Historia"
+              loading="lazy"
+            />
           <p style="text-align: justify;">
             En el año 2023 la empresa da un giro en su gestión directiva y se cambian los accionistas pero se conserva la misma esencia y el mismo deseo de crecimiento y fortalecimiento, por ello en el 2024 se trazó como meta no solo el posicionamiento nacional sino generar a sus clientes la tranquilidad de una revisión segura, confiable y con el respaldo de la mejor calidad.
  
@@ -144,8 +117,9 @@ Hoy en día Oi ElectroGases sigue reinventándose pero manteniendo su esencia, p
       <div class="col-md-6 col-lg-5">
         <div class="card h-100 shadow-sm">
           <img
-            src="img/mision.png"
+            src="../img/mision.png"
             class="card-img-top"
+            loading="lazy"
             alt="Nuestra Misión"
             style="height: 250px; object-fit: cover;"
           />
@@ -163,8 +137,9 @@ Hoy en día Oi ElectroGases sigue reinventándose pero manteniendo su esencia, p
       <div class="col-md-6 col-lg-5">
         <div class="card h-100 shadow-sm">
           <img
-            src="img/vision.png"
+            src="../img/vision.png"
             class="card-img-top"
+            loading="lazy"
             alt="Nuestra Visión"
             style="height: 250px; object-fit: cover;"
           />
@@ -186,90 +161,90 @@ Hoy en día Oi ElectroGases sigue reinventándose pero manteniendo su esencia, p
 <!-- APARTADO ALIADOS -->
 <section id="nuestrosAliados" class="py-5">
   <div class="container">
-    <h2 class="text-center fw-bold mb-4" style="font-size: 60px;">Nuestros aliados</h2>
+    <h2 class="text-center fw-bold mb-4 titulo-grande">Nuestros aliados</h2>
     <div class="row justify-content-center align-items-center g-4">
       <!-- Logo 1 -->
       <div class="col-6 col-md-3">
         <div class="d-flex align-items-center justify-content-center rounded shadow-sm aliado-card bg-white">
-          <img src="img/colgas.png" class="img-fluid aliado-img" alt="Colgas" loading="lazy">
+          <img src="../img/colgas.png" class="img-fluid aliado-img" alt="Colgas" loading="lazy">
         </div>
       </div>
       <!-- Logo 2 -->
       <div class="col-6 col-md-3">
         <div class="d-flex align-items-center justify-content-center rounded shadow-sm aliado-card bg-white">
-          <img src="img/cens.png" class="img-fluid aliado-img" alt="CENS" loading="lazy">
+          <img src="../img/cens.png" class="img-fluid aliado-img" alt="CENS" loading="lazy">
         </div>
       </div>
       <!-- Logo 3 -->
       <div class="col-6 col-md-3">
         <div class="d-flex align-items-center justify-content-center rounded shadow-sm aliado-card bg-white">
-          <img src="img/alcanos.jpeg" class="img-fluid aliado-img" alt="Aliado 3" loading="lazy">
+          <img src="../img/alcanos.jpeg" class="img-fluid aliado-img" alt="Aliado 3" loading="lazy">
         </div>
       </div>
       <!-- Logo 4 -->
       <div class="col-6 col-md-3">
         <div class="d-flex align-items-center justify-content-center rounded shadow-sm aliado-card bg-white">
-          <img src="img/central_gas.png" class="img-fluid aliado-img" alt="Aliado 4" loading="lazy">
+          <img src="../img/central_gas.png" class="img-fluid aliado-img" alt="Aliado 4" loading="lazy">
         </div>
       </div>
       <!-- Logo 5 -->
       <div class="col-6 col-md-3">
         <div class="d-flex align-items-center justify-content-center rounded shadow-sm aliado-card bg-white">
-          <img src="img/gases_del_caribe.png" class="img-fluid aliado-img" alt="Aliado 5" loading="lazy">
+          <img src="../img/gases_del_caribe.png" class="img-fluid aliado-img" alt="Aliado 5" loading="lazy">
         </div>
       </div>
       <!-- Logo 6 -->
       <div class="col-6 col-md-3">
         <div class="d-flex align-items-center justify-content-center rounded shadow-sm aliado-card bg-white">
-          <img src="img/Gases_de_occidente.png" class="img-fluid aliado-img" alt="Aliado 6" loading="lazy">
+          <img src="../img/gases_de_occidente.png" class="img-fluid aliado-img" alt="Aliado 6" loading="lazy">
         </div>
       </div>
       <!-- Logo 7 -->
       <div class="col-6 col-md-3">
         <div class="d-flex align-items-center justify-content-center rounded shadow-sm aliado-card bg-white">
-          <img src="img/llanogas.png" class="img-fluid aliado-img" alt="Aliado 7" loading="lazy">
+          <img src="../img/llanogas.png" class="img-fluid aliado-img" alt="Aliado 7" loading="lazy">
         </div>
       </div>
       <!-- Logo 8 -->
       <div class="col-6 col-md-3">
         <div class="d-flex align-items-center justify-content-center rounded shadow-sm aliado-card bg-white">
-          <img src="img/madigas.png" class="img-fluid aliado-img" alt="Aliado 8" loading="lazy">
+          <img src="../img/madigas.png" class="img-fluid aliado-img" alt="Aliado 8" loading="lazy">
         </div>
       </div>
       <!-- Logo 9 -->
       <div class="col-6 col-md-3">
         <div class="d-flex align-items-center justify-content-center rounded shadow-sm aliado-card bg-white">
-          <img src="img/Metrogas.jpg" class="img-fluid aliado-img" alt="Aliado 9" loading="lazy">
+          <img src="../img/metrogas.jpg" class="img-fluid aliado-img" alt="Aliado 9" loading="lazy">
         </div>
       </div>
       <!-- Logo 10 -->
       <div class="col-6 col-md-3">
         <div class="d-flex align-items-center justify-content-center rounded shadow-sm aliado-card bg-white">
-          <img src="img/surgas.jpeg" class="img-fluid aliado-img" alt="Aliado 10" loading="lazy">
+          <img src="../img/surgas.jpeg" class="img-fluid aliado-img" alt="Aliado 10" loading="lazy">
         </div>
       </div>
       <!-- Logo 11 -->
       <div class="col-6 col-md-3">
         <div class="d-flex align-items-center justify-content-center rounded shadow-sm aliado-card bg-white">
-          <img src="img/surtigas.png" class="img-fluid aliado-img" alt="Aliado 11" loading="lazy">
+          <img src="../img/surtigas.png" class="img-fluid aliado-img" alt="Aliado 11" loading="lazy">
         </div>
       </div>
       <!-- Logo 12 -->
       <div class="col-6 col-md-3">
         <div class="d-flex align-items-center justify-content-center rounded shadow-sm aliado-card bg-white">
-          <img src="img/unigas.png" class="img-fluid aliado-img" alt="Aliado 12" loading="lazy">
+          <img src="../img/unigas.png" class="img-fluid aliado-img" alt="Aliado 12" loading="lazy">
         </div>
       </div>
       <!-- Logo 13 -->
       <div class="col-6 col-md-3">
         <div class="d-flex align-items-center justify-content-center rounded shadow-sm aliado-card bg-white">
-          <img src="img/vanti.png" class="img-fluid aliado-img" alt="Aliado 13" loading="lazy">
+          <img src="../img/vanti.png" class="img-fluid aliado-img" alt="Aliado 13" loading="lazy">
         </div>
       </div>
       <!-- Logo 14 -->
       <div class="col-6 col-md-3">
         <div class="d-flex align-items-center justify-content-center rounded shadow-sm aliado-card bg-white">
-          <img src="img/gases_oriente.jpeg" class="img-fluid aliado-img" alt="Aliado 14" loading="lazy">
+          <img src="../img/gases_oriente.jpeg" class="img-fluid aliado-img" alt="Aliado 14" loading="lazy">
         </div>
     </div>
   </div>
@@ -300,7 +275,7 @@ Hoy en día Oi ElectroGases sigue reinventándose pero manteniendo su esencia, p
     <!-- 4. “Trabaja con nosotros” (contenido pendiente) -->
     <section id="trabajaConNosotros" class="py-5 bg-light">
       <div class="container">
-        <h2 class="text-center fw-bold mb-4" style="font-size: 60px;">Trabaja con nosotros</h2>
+        <h2 class="text-center fw-bold mb-4 titulo-grande">Trabaja con nosotros</h2>
         <p class="text-center text-muted">
           Pronto publicaremos nuestras vacantes y formas de aplicación.
         </p>
@@ -309,64 +284,14 @@ Hoy en día Oi ElectroGases sigue reinventándose pero manteniendo su esencia, p
   </main>
 
   <!-- =====================
-       FOOTER COMÚN
+       FOOTER COMÚN - Componente dinámico
        ===================== -->
-  <footer class="bg-dark text-white pt-5">
-    <div class="container">
-      <div class="row">
-        <!-- IZQUIERDA: Nombre y mensaje -->
-        <div class="col-md-4 mb-4">
-          <h5 class="fw-bold">OI ELECTROGASES</h5>
-          <p class="mb-0">Confianza y respaldo</p>
-        </div>
-
-        <!-- DERECHA: Tres apartados -->
-        <div class="col-md-8">
-          <div class="row">
-            <!-- 1: Acerca de -->
-            <div class="col-6 col-lg-4 mb-4">
-              <h6 class="text-uppercase fw-bold">Acerca de</h6>
-              <ul class="list-unstyled">
-                <li><a href="conocenos.html" class="text-white text-decoration-none">Conócenos</a></li>
-                <li><a href="servicios.html" class="text-white text-decoration-none">Trabaja con nosotros</a></li>
-                <li><a href="conocenos.html" class="text-white text-decoration-none">Nuestros aliados</a></li>
-              </ul>
-            </div>
-
-            <!-- 2: Servicio al Cliente -->
-            <div class="col-6 col-lg-4 mb-4">
-              <h6 class="text-uppercase fw-bold">Servicio al Cliente</h6>
-              <ul class="list-unstyled">
-                <li><a href="servicios.html" class="text-white text-decoration-none">Contáctanos</a></li>
-                <li><a href="servicios.html" class="text-white text-decoration-none">Agenda tu revisión</a></li>
-                <li><a href="servicios.html" class="text-white text-decoration-none">PQRS</a></li>
-                <li><a href="servicios.html" class="text-white text-decoration-none">Preguntas frecuentes</a></li>
-              </ul>
-            </div>
-
-            <!-- 3: Legal -->
-            <div class="col-6 col-lg-4 mb-4">
-              <h6 class="text-uppercase fw-bold">Legal</h6>
-              <ul class="list-unstyled">
-                <li><a href="marco_legal.html" class="text-white text-decoration-none">Política de tratamientos de datos</a></li>
-                <li><a href="marco_legal.html" class="text-white text-decoration-none">Términos y condiciones</a></li>
-                <li><a href="marco_legal.html" class="text-white text-decoration-none">Revisión periódica obligatoria</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <hr class="border-secondary" />
-
-      <div class="text-center pb-3">
-        <small>&copy; 2025 OI ELECTROGASES. Todos los derechos reservados.</small>
-      </div>
-    </div>
-  </footer>
+  <div id="footer-container"></div>
 
   <!-- === BOOTSTRAP JS LOCAL === -->
-  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="../js/bootstrap.bundle.min.js"></script>
+  <!-- Componentes reutilizables -->
+  <script src="../js/components.js"></script>
   <script>
   function toggleContenido() {
     const contenido = document.getElementById("contenidoExtra");
@@ -381,6 +306,5 @@ Hoy en día Oi ElectroGases sigue reinventándose pero manteniendo su esencia, p
     }
   }
 </script>
-  </script>
 </body>
 </html>

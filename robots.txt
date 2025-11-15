@@ -1,0 +1,23 @@
+# robots.txt para OI ELECTROGASES
+
+User-agent: *
+Allow: /
+
+# Permitir acceso a recursos estáticos
+Allow: /css/
+Allow: /js/
+Allow: /img/
+Allow: /docs/
+Allow: /webfonts/
+
+# Deshabilitar acceso a archivos de sistema (si existen)
+Disallow: /.git/
+Disallow: /.vscode/
+Disallow: /.idea/
+
+# Sitemap
+Sitemap: https://www.oielectrogases.com/sitemap.xml
+
+# Crawl-delay (opcional, ajustar según necesidades)
+# Crawl-delay: 1
+

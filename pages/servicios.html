@@ -3,15 +3,44 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>OI ELECTROGASES – Servicios</title>
+  
+  <!-- SEO Meta Tags -->
+  <title>OI ELECTROGASES – Servicios | Revisión Obligatoria y Preventiva de Gas</title>
+  <meta name="description" content="Servicios de revisión periódica obligatoria y preventiva de gas natural en Colombia. Agenda tu revisión, envía PQRS y consulta nuestras preguntas frecuentes." />
+  <meta name="keywords" content="revisión obligatoria gas, revisión preventiva gas, PQRS gas, agenda revisión gas, preguntas frecuentes gas natural, servicio cliente gas" />
+  <meta name="author" content="OI ELECTROGASES" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.oielectrogases.com/pages/servicios.html" />
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.oielectrogases.com/pages/servicios.html" />
+  <meta property="og:title" content="OI ELECTROGASES - Servicios | Revisión Obligatoria y Preventiva" />
+  <meta property="og:description" content="Servicios de revisión periódica obligatoria y preventiva de gas natural. Agenda tu revisión y envía tus PQRS." />
+  <meta property="og:image" content="https://www.oielectrogases.com/img/llamada.jpg" />
+  <meta property="og:site_name" content="OI ELECTROGASES" />
+  <meta property="og:locale" content="es_CO" />
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://www.oielectrogases.com/pages/servicios.html" />
+  <meta name="twitter:title" content="OI ELECTROGASES - Servicios" />
+  <meta name="twitter:description" content="Servicios de revisión periódica obligatoria y preventiva de gas natural. Agenda tu revisión hoy." />
+  <meta name="twitter:image" content="https://www.oielectrogases.com/img/llamada.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="../img/logo.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="../img/logo.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../img/logo.png" />
+  <link rel="shortcut icon" href="../img/logo.png" />
 
   <!-- Bootstrap CSS local -->
-  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="../css/bootstrap.min.css" />
 
   <!-- FontAwesome CSS local (para íconos) -->
-  <link rel="stylesheet" href="css/all.min.css" />
+  <link rel="stylesheet" href="../css/all.min.css" />
 
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="../css/style.css">
 
   <style>
     /* =============================
@@ -35,6 +64,46 @@
     #pqrServicio .btn-primary {
       border-radius: 0;
     }
+    
+    /* Imagen de servicio responsiva */
+    #pqrServicio .servicio-img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      display: block;
+      margin: 0 auto;
+    }
+    
+    /* Ajustes para móviles */
+    @media (max-width: 991.98px) {
+      #pqrServicio .col-lg-5 {
+        width: 100%;
+        margin-top: 2rem;
+        text-align: center;
+      }
+      
+      #pqrServicio .servicio-img {
+        width: 100% !important;
+        max-width: 100%;
+        height: auto;
+        object-fit: contain;
+      }
+    }
+    
+    /* Ajuste específico para Mobile M (375px) */
+    @media (min-width: 374px) and (max-width: 376px) {
+      #pqrServicio .col-lg-5 {
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+      }
+      
+      #pqrServicio .servicio-img {
+        width: 100% !important;
+        max-width: 100%;
+        height: auto;
+        object-fit: contain;
+      }
+    }
 
     /* ===== Preguntas Frecuentes ===== */
     #faqServicio .accordion-button::after {
@@ -42,6 +111,101 @@
     }
     #faqServicio .accordion-item + .accordion-item {
       border-top: 1px solid #dee2e6;
+    }
+    
+    /* Ajustes para móviles - Acordeón */
+    @media (max-width: 576px) {
+      #faqServicio .accordion-button {
+        font-size: 0.95rem;
+        padding: 0.75rem 1rem;
+        line-height: 1.4;
+        text-align: left;
+        word-wrap: break-word;
+        white-space: normal;
+      }
+      
+      #faqServicio .accordion-body {
+        font-size: 0.9rem;
+        line-height: 1.6;
+        padding: 1rem;
+      }
+      
+      #faqServicio .accordion-button::after {
+        flex-shrink: 0;
+        margin-left: 0.5rem;
+      }
+    }
+    
+    /* Ajustes específicos para Mobile M (375px) */
+    @media (min-width: 374px) and (max-width: 376px) {
+      #faqServicio .container {
+        padding-left: 0.75rem !important;
+        padding-right: 0.75rem !important;
+      }
+      
+      #faqServicio .accordion {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+      }
+      
+      #faqServicio .accordion-item {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        border-left: none !important;
+        border-right: none !important;
+      }
+      
+      #faqServicio .accordion-button {
+        font-size: 0.9rem;
+        padding: 0.85rem 1rem !important;
+        padding-left: 0.75rem !important;
+        line-height: 1.35;
+        min-height: 3.5rem;
+        display: flex;
+        align-items: center;
+        margin-left: 0 !important;
+        border-left: none !important;
+        border-radius: 0 !important;
+      }
+      
+      #faqServicio .accordion-body {
+        font-size: 0.875rem;
+        padding: 1rem !important;
+        padding-left: 0.75rem !important;
+        line-height: 1.65;
+      }
+      
+      #faqServicio .accordion-button:not(.collapsed) {
+        box-shadow: none;
+      }
+      
+      /* Eliminar cualquier espacio del accordion-header */
+      #faqServicio .accordion-header {
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+    }
+    
+    /* Ajustes adicionales para móviles pequeños (hasta 400px) */
+    @media (max-width: 400px) {
+      #faqServicio .container {
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+      }
+      
+      #faqServicio .accordion-button {
+        font-size: 0.875rem;
+        padding: 0.75rem 0.75rem;
+      }
+      
+      #faqServicio .accordion-body {
+        font-size: 0.85rem;
+        padding: 0.9rem 0.75rem;
+      }
     }
 
     /* ===== Footer ===== */
@@ -60,81 +224,24 @@
 </head>
 <body>
   <!-- ============================
-       BARRA DE NAVEGACIÓN (Header)
+       BARRA DE NAVEGACIÓN (Header) - Componente dinámico
        ============================ -->
-<nav class="navbar navbar-expand-lg navbar-dark navbar-oscuro sticky-top">
-  <div class="container">
-    <!-- Logo + Título a la izquierda -->
-    <a class="navbar-brand d-flex align-items-center" href="index.html">
-      <img
-        src="img/logo.png"
-        alt="IOELECTROGASES Logo"
-        style="height: 80px;"
-        class="me-2"
-      />
-      <span class="fs-3 fw-bold" style="color: white;">OI ELECTRO</span><span class="fs-3 fw-bold" style="color: #e62920;">GASES</span>
-    </a>
-
-    <!-- Botón toggle (móvil) -->
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#mainNavbar"
-      aria-controls="mainNavbar"
-      aria-expanded="false"
-      aria-label="Abrir menú de navegación"
-    >
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <!-- Ítems del menú -->
-    <div class="collapse navbar-collapse" id="mainNavbar">
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="conocenos.html">Conócenos</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="servicios.html">Servicios</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a
-            class="nav-link dropdown-toggle"
-            href="#"
-            id="navbarDropdown"
-            role="button"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
-            Más
-          </a>
-          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-            <li>
-              <a class="dropdown-item" href="marco_legal.html">Marco legal</a>
-            </li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
+  <div id="navbar-container"></div>
 
   <!-- ================================
        SECCIÓN 1: Servicio al Cliente
        ================================ -->
   <section id="servicioCliente">
     <div class="container text-center">
-      <h2 class="fw-bold mb-4" style="font-size: 60px;">Servicio al Cliente</h2>
+      <h2 class="fw-bold mb-4 titulo-grande">Servicio al Cliente</h2>
       <div class="row justify-content-center">
         <div class="col-lg-12">
           <img
-            src="img/svo.png"
+            src="../img/svo.png"
             alt="Servicio al Cliente"
             class="img-fluid rounded shadow-sm cliente-img"
             style="height: auto;"
+            loading="lazy"
           />
         </div>
       </div>
@@ -234,10 +341,11 @@
         <!-- Imagen (derecha) -->
         <div class="col-lg-5">
           <img
-+         src="img/llamada.jpg"
-+         alt="Ilustración PQRS/Servicio"
-+         class="img-fluid rounded shadow-sm servicio-img"
-+       />
+            src="../img/llamada.jpg"
+            alt="Ilustración PQRS/Servicio"
+            class="img-fluid rounded shadow-sm servicio-img"
+            loading="lazy"
+          />
         </div>
       </div>
     </div>
@@ -248,7 +356,7 @@
        ============================= -->
   <section id="faqServicio" class="py-5">
     <div class="container">
-      <h2 class="text-center fw-bold mb-5" style="font-size: 60px;">Preguntas Frecuentes</h2>
+      <h2 class="text-center fw-bold mb-5 titulo-grande">Preguntas Frecuentes</h2>
       <div class="accordion" id="accordionFAQ">
         <!-- Pregunta 1 -->
         <div class="accordion-item">
@@ -349,6 +457,15 @@
           </h2>
           <div id="faqCollapse6" class="accordion-collapse collapse" aria-labelledby="faqHeading6" data-bs-parent="#accordionFAQ">
             <div class="accordion-body">
+              <div class="mb-4 d-flex justify-content-center">
+                <img 
+                  src="../img/flujo_pqrs.png" 
+                  alt="Flujo de Atención de PQRS" 
+                  class="img-fluid rounded shadow-sm"
+                  style="max-width: 80%; height: auto; width: auto;"
+                  loading="lazy"
+                />
+              </div>
               El proceso para dar respuesta a las PQRS (Peticiones, Quejas, Reclamos y Sugerencias) es el siguiente:
               <ol>
                 <li>Recepción y Registro: Se recibe la solicitud y se registra en el sistema en un plazo de 0 a 1 día hábil.</li>
@@ -365,78 +482,17 @@
   </section>
 
   <!-- =====================
-       FOOTER COMÚN
+       FOOTER COMÚN - Componente dinámico
        ===================== -->
-  <footer class="bg-dark text-white pt-5">
-    <div class="container">
-      <div class="row">
-        <!-- IZQUIERDA: Nombre y mensaje -->
-        <div class="col-md-4 mb-4">
-          <h5 class="fw-bold">OI ELECTROGASES</h5>
-          <p class="mb-0">Confianza y respaldo</p>
-        </div>
-        <!-- DERECHA: Tres apartados -->
-        <div class="col-md-8">
-          <div class="row">
-            <!-- 1: Acerca de -->
-            <div class="col-6 col-lg-4 mb-4">
-              <h6 class="text-uppercase fw-bold">Acerca de</h6>
-              <ul class="list-unstyled">
-                <li><a href="conocenos.html" class="text-white">Conócenos</a></li>
-                <li><a href="servicios.html" class="text-white">Trabaja con nosotros</a></li>
-                <li><a href="conocenos.html" class="text-white">Nuestros aliados</a></li>
-              </ul>
-            </div>
-            <!-- 2: Servicio al Cliente -->
-            <div class="col-6 col-lg-4 mb-4">
-              <h6 class="text-uppercase fw-bold">Servicio al Cliente</h6>
-              <ul class="list-unstyled">
-                <li><a href="servicios.html#servicioCliente" class="text-white">Contáctanos</a></li>
-                <li><a href="servicios.html#pqrServicio" class="text-white">Agenda tu revisión</a></li>
-                <li><a href="servicios.html#faqServicio" class="text-white">PQRS</a></li>
-                <li><a href="servicios.html" class="text-white text-decoration-none">Preguntas frecuentes</a></li>
-              </ul>
-            </div>
-            <!-- 3: Legal -->
-            <div class="col-6 col-lg-4 mb-4">
-              <h6 class="text-uppercase fw-bold">Legal</h6>
-              <ul class="list-unstyled">
-                <li><a href="marco_legal.html" class="text-white">Política de datos</a></li>
-                <li><a href="marco_legal.html" class="text-white">Términos y condiciones</a></li>
-                <li><a href="marco_legal.html" class="text-white">Revisión periódica</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-      <hr class="border-secondary" />
-      <div class="text-center pb-3">
-        <small>&copy; 2025 OI ELECTROGASES. Todos los derechos reservados.</small>
-      </div>
-    </div>
-  </footer>
+  <div id="footer-container"></div>
 
   <!-- Bootstrap JS local -->
-  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="../js/bootstrap.bundle.min.js"></script>
+  <!-- Componentes reutilizables -->
+  <script src="../js/components.js"></script>
 
-  <!-- Script para validación de formulario PQRS/Servicio -->
+  <!-- Script para envío del formulario PQRS/Servicio a Google Apps Script -->
   <script>
-    (function() {
-      const form = document.getElementById('pqrForm');
-      const success = document.getElementById('pqrSuccess');
-      form.addEventListener('submit', function(e) {
-        e.preventDefault();
-        if (!form.checkValidity()) {
-          form.classList.add('was-validated');
-          return;
-        }
-        form.reset();
-        form.classList.remove('was-validated');
-        success.classList.remove('d-none');
-      });
-    })();
-  </script>
-<script>
   function enviarPorGAS(event) {
     event.preventDefault(); // Evita que el formulario haga submit convencional
 

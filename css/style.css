@@ -3,7 +3,35 @@
   background-color: #001a70 !important;
 }
 
-/* 1) Forzar el SVG blanco del ícono “hamburguesa” de Bootstrap */
+/* Asegurar que navbar-brand y navbar-toggler estén en la misma línea */
+.navbar-oscuro .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+/* Navbar brand - logo y título */
+.navbar-oscuro .navbar-brand {
+  flex: 0 1 auto;
+  margin-right: auto;
+  white-space: nowrap;
+}
+
+/* Botón hamburguesa siempre a la derecha */
+.navbar-oscuro .navbar-toggler {
+  flex: 0 0 auto;
+  margin-left: auto;
+  order: 2;
+}
+
+/* Colapsar menú siempre después del botón */
+.navbar-oscuro .navbar-collapse {
+  order: 3;
+  width: 100%;
+}
+
+/* 1) Forzar el SVG blanco del ícono "hamburguesa" de Bootstrap */
 .navbar-dark .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%28255,255,255,0.7%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
@@ -12,6 +40,88 @@
 .navbar-toggler:focus {
   outline: none;
   box-shadow: none;
+}
+
+/* Ajustes para móviles - reducir tamaño del logo y título */
+@media (max-width: 991.98px) {
+  .navbar-oscuro .navbar-brand img {
+    height: 50px !important;
+  }
+  
+  .navbar-oscuro .navbar-brand .fs-3 {
+    font-size: 1.2rem !important;
+  }
+  
+  /* Asegurar que el botón hamburguesa esté visible y alineado a la derecha */
+  .navbar-oscuro .navbar-toggler {
+    display: flex !important;
+    align-items: center;
+    padding: 0.25rem 0.5rem;
+  }
+}
+
+/* Móviles muy pequeños (menos de 375px) */
+@media (max-width: 374px) {
+  .navbar-oscuro .navbar-brand img {
+    height: 40px !important;
+  }
+  
+  .navbar-oscuro .navbar-brand .fs-3 {
+    font-size: 0.9rem !important;
+  }
+  
+  /* Ajustar padding del navbar */
+  .navbar-oscuro .container {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}
+
+/* Títulos grandes responsivos */
+h1, h2 {
+  font-size: clamp(2rem, 5vw, 3.75rem) !important; /* Entre 2rem y 3.75rem según pantalla */
+}
+
+/* Clase específica para títulos grandes del sitio */
+.titulo-grande {
+  font-size: clamp(1.75rem, 6vw, 3.75rem) !important; /* Responsivo: 1.75rem en móviles, hasta 3.75rem en desktop */
+  line-height: 1.2;
+}
+
+/* Ajustes adicionales para títulos en móviles muy pequeños */
+@media (max-width: 374px) {
+  .titulo-grande {
+    font-size: 1.5rem !important;
+  }
+}
+
+/* Ajustes para textos en móviles */
+@media (max-width: 576px) {
+  .card-title {
+    font-size: 1.1rem;
+  }
+  
+  .card-text {
+    font-size: 0.9rem;
+  }
+  
+  /* Footer más compacto en móviles */
+  footer .col-md-4,
+  footer .col-md-8 {
+    margin-bottom: 1.5rem;
+  }
+  
+  footer h5 {
+    font-size: 1.1rem;
+  }
+  
+  footer h6 {
+    font-size: 0.85rem;
+  }
+  
+  footer ul {
+    font-size: 0.85rem;
+  }
 }
 
 /* ===== Estilos del footer (degradado azul) ===== */
@@ -31,11 +141,19 @@ footer a:hover {
 
 /* 1) Carrusel en index.html */
 #miCarrusel {
-  width: 99.23vw;        /* Ocupa todo el ancho de la ventana */
+  width: 100%;        /* Ocupa todo el ancho del contenedor */
   height: auto;        /* Mantiene la altura del contenedor/carrusel */
-  left: 50%;
-  transform: translateX(-50%);
+  margin: 0 auto;
   display: block;
+}
+
+/* Contenedor del carrusel sin padding en móviles */
+.container.py-0 {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  margin-left: 0;
+  margin-right: 0;
+  max-width: 100%;
 }
 
 .carousel-inner {
@@ -60,53 +178,48 @@ footer a:hover {
 /* Otras imágenes también se pueden modificar de manera similar */
 .conocenos-img-peque,
 .conocenos-img-grande,
-.servicio-img,
 .marco-img {
   width: 100%;  /* Asegura que las imágenes no se recorten en el ancho */
   height: auto;  /* Permite que las imágenes se ajusten sin perder proporción */
   object-fit: cover;  /* Cubrirá el área pero manteniendo la relación de aspecto */
 }
-.servicio-img
- {
-  width: 80%;  /* Asegura que las imágenes no se recorten en el ancho */
-  height: auto;  /* Permite que las imágenes se ajusten sin perder proporción */
-  object-fit: cover;  /* Cubrirá el área pero manteniendo la relación de aspecto */
+
+/* Imagen de servicio (llamada.jpg) - Responsiva */
+.servicio-img {
+  width: 100%;  /* En móviles ocupa todo el ancho */
+  height: auto;
+  object-fit: contain;  /* Mantiene la proporción sin recortar */
+  display: block;
+  margin: 0 auto;  /* Centrada */
+}
+
+/* En desktop, la imagen puede ser un poco más pequeña */
+@media (min-width: 992px) {
+  .servicio-img {
+    width: 100%;
+    max-width: 100%;
+  }
 }
 /* ============================
    Ajustes responsivos para pantallas pequeñas
    ============================ */
 
-@media (min-width: 375px) and (max-width: 575px) {
-  #miCarrusel {
-  width: 100vw;        
-}
-  .carousel-img {
-    height: auto;
-    width: auto;
-    object-fit: contain; /* Para que las imágenes se adapten sin deformarse */
-  }
-  .conocenos-img-peque {
-    height: 180px;
-  }
-  .conocenos-img-grande {
-    height: 250px;
-  }
-  .servicio-img {
-    height: 350px;
-  }
-  .marco-img {
-    height: 250px;
-  }
-}
-
-
-
-
-/* 1) Para móviles (≤576px) */
+/* 1) Para móviles pequeños (≤576px) */
 @media (max-width: 576px) {
+  .container.py-0 {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  
   #miCarrusel {
-  width: 100vw;        
-}
+    width: 100%;
+    margin: 0;
+    left: 0;
+    transform: none;
+  }
+  
   .carousel-img {
     height: auto;
     width: 100%;
@@ -119,18 +232,76 @@ footer a:hover {
     height: 250px;
   }
   .servicio-img {
-    height: 350px;
+    height: auto;
+    width: 100% !important;
+    max-width: 100%;
+    object-fit: contain;
+    margin: 1rem auto;
+  }
+  
+  /* Asegurar que la columna de la imagen ocupe todo el ancho en móviles */
+  #pqrServicio .col-lg-5 {
+    width: 100%;
+    margin-top: 1.5rem;
+  }
+  
+  #pqrServicio .col-lg-5 img {
+    width: 100% !important;
+    max-width: 100%;
   }
   .marco-img {
-    height: 250px;
+    height: 200px;
+  }
+  
+  /* Cards más compactas */
+  .card-img-top {
+    height: 200px !important;
+  }
+  
+  /* Espaciado reducido */
+  section {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+  }
+}
+
+/* Ajuste específico para Mobile M (375px) - Carrusel */
+@media (min-width: 374px) and (max-width: 376px) {
+  .container.py-0 {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  
+  #miCarrusel {
+    width: 100% !important;
+    margin: 0 !important;
+    left: 0 !important;
+    transform: none !important;
+    position: relative !important;
+  }
+  
+  .carousel-inner {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  
+  .carousel-item {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
   }
 }
 
 /* 2) Para tablets pequeñas (577px – 768px) */
 @media (min-width: 577px) and (max-width: 768px) {
   #miCarrusel {
-  width: 100vw;        
-}
+    width: 100vw;        
+  }
   .carousel-img {
     height: auto;
     width: 100%;
@@ -143,18 +314,31 @@ footer a:hover {
     height: 300px;
   }
   .servicio-img {
-    height: 450px;
+    height: auto;
+    width: 100% !important;
+    max-width: 100%;
+    object-fit: contain;
+    margin: 1rem auto;
+  }
+  
+  #pqrServicio .col-lg-5 {
+    width: 100%;
   }
   .marco-img {
-    height: 300px;
+    height: 280px;
+  }
+  
+  /* Cards ajustadas */
+  .card-img-top {
+    height: 220px !important;
   }
 }
 
 /* 3) Para pantallas medianas (769px – 991px) */
 @media (min-width: 769px) and (max-width: 991px) {
   #miCarrusel {
-  width: 100vw;        
-}
+    width: 100vw;        
+  }
   .carousel-img {
     height: auto;
     width: 100%;
@@ -167,59 +351,57 @@ footer a:hover {
     height: 350px;
   }
   .servicio-img {
-    height: 500px;
+    height: auto;
+    width: 100% !important;
+    max-width: 100%;
+    object-fit: contain;
+  }
+  
+  #pqrServicio .col-lg-5 {
+    width: 100%;
   }
   .marco-img {
-    height: 330px;
+    height: 300px;
   }
 }
 
 
-/* 4) Para computadoras portátiles con pantallas grandes (992px a 1200px) */
+/* 4) Para computadoras portátiles (992px a 1200px) */
 @media (min-width: 992px) and (max-width: 1200px) {
- 
-  /* Ajuste adicional para pantallas medianas de computadoras y laptops */
- #miCarrusel {
-  width: 100vw;        
-}
+  #miCarrusel {
+    width: 100vw;        
+  }
   .carousel-img {
-    height: auto;  /* Ajustamos el tamaño del carrusel */
-    object-fit: contain
+    height: auto;
+    object-fit: contain;
   }
   .conocenos-img-peque {
-    height: 280px; /* Imágenes pequeñas ajustadas */
+    height: 280px;
   }
   .conocenos-img-grande {
-    height: 380px; /* Imágenes grandes ajustadas */
+    height: 380px;
   }
   .servicio-img {
-    height: 550px; /* Ajustamos imágenes de servicio */
+    height: auto;
+    width: 100% !important;
+    max-width: 100%;
+    object-fit: contain;
   }
   .marco-img {
-    height: 350px; /* Ajustamos imágenes de marco legal */
+    height: 350px;
   }
 }
 
-@media (min-width: 1201px) and (max-width: 1440px) {
- 
-  /* Ajuste adicional para pantallas medianas de computadoras y laptops */
- #miCarrusel {
-  width: 100vw;        
-}
+/* 5) Para pantallas grandes (1201px+) */
+@media (min-width: 1201px) {
+  #miCarrusel {
+    width: 100vw;        
+  }
   .carousel-img {
-    height: auto;  /* Ajustamos el tamaño del carrusel */
-    object-fit: contain
-  }
-  .conocenos-img-peque {
-    height: 280px; /* Imágenes pequeñas ajustadas */
-  }
-  .conocenos-img-grande {
-    height: 380px; /* Imágenes grandes ajustadas */
+    height: auto;
+    object-fit: contain;
   }
   .servicio-img {
-    height: 550px; /* Ajustamos imágenes de servicio */
-  }
-  .marco-img {
-    height: 350px; /* Ajustamos imágenes de marco legal */
+    width: 80%;
   }
 }
