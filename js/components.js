@@ -156,6 +156,7 @@ function generateFooter() {
                 <h6 class="text-uppercase fw-bold">Legal</h6>
                 <ul class="list-unstyled">
                   <li><a href="${marcoLegalLink}">Política de datos</a></li>
+                  <li><a href="${basePath ? 'politica_datos_jec.html' : 'pages/politica_datos_jec.html'}">Política de datos JEC</a></li>
                   <li><a href="${marcoLegalLink}">Términos y condiciones</a></li>
                   <li><a href="${marcoLegalLink}">Revisión periódica</a></li>
                 </ul>
