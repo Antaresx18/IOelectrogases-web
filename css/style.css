@@ -3,32 +3,32 @@
   background-color: #001a70 !important;
 }
 
-/* Asegurar que navbar-brand y navbar-toggler estén en la misma línea */
-.navbar-oscuro .container {
+/* Navbar full-width layout */
+.navbar-oscuro .container-fluid {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  flex-wrap: nowrap;
-}
-
-/* Navbar brand - logo y título */
-.navbar-oscuro .navbar-brand {
-  flex: 0 1 auto;
-  margin-right: auto;
-  white-space: nowrap;
-}
-
-/* Botón hamburguesa siempre a la derecha */
-.navbar-oscuro .navbar-toggler {
-  flex: 0 0 auto;
-  margin-left: auto;
-  order: 2;
-}
-
-/* Colapsar menú siempre después del botón */
-.navbar-oscuro .navbar-collapse {
-  order: 3;
+  justify-content: space-between;
   width: 100%;
+  max-width: 100%;
+  gap: 1rem;
+}
+
+.navbar-oscuro .navbar-brand {
+  margin-right: auto;
+  padding-left: 0;
+}
+
+.navbar-oscuro .navbar-collapse {
+  flex-grow: 0;
+}
+
+.navbar-oscuro .navbar-nav {
+  margin-left: auto;
+  gap: 0.5rem;
+}
+
+.navbar-oscuro .navbar-toggler {
+  margin-left: auto;
 }
 
 /* 1) Forzar el SVG blanco del ícono "hamburguesa" de Bootstrap */
@@ -142,9 +142,11 @@ footer a:hover {
 /* 1) Carrusel en index.html */
 #miCarrusel {
   width: 100%;        /* Ocupa todo el ancho del contenedor */
+  max-width: 100%;    /* No exceder el ancho del contenedor */
   height: auto;        /* Mantiene la altura del contenedor/carrusel */
   margin: 0 auto;
   display: block;
+  overflow-x: hidden;  /* Prevenir scroll horizontal */
 }
 
 /* Contenedor del carrusel sin padding en móviles */
@@ -154,22 +156,30 @@ footer a:hover {
   margin-left: 0;
   margin-right: 0;
   max-width: 100%;
+  width: 100%;
+  overflow-x: hidden;  /* Prevenir scroll horizontal */
 }
 
 .carousel-inner {
   width: 100%;         /* El contenedor interno ocupa todo el ancho disponible */
+  max-width: 100%;     /* No exceder el ancho */
   height: auto;        /* El contenedor se ajusta a la altura disponible */
+  overflow-x: hidden;  /* Prevenir scroll horizontal */
 }
 
 .carousel-item {
   width: 100%;         /* Cada slide ocupa todo el ancho del contenedor */
+  max-width: 100%;     /* No exceder el ancho */
   height: auto;        /* La altura se ajusta automáticamente */
+  overflow-x: hidden;  /* Prevenir scroll horizontal */
 }
 
 .carousel-img {
   width: 100%;         /* La imagen ocupa el 100% del ancho disponible */
+  max-width: 100%;     /* No exceder el ancho */
   height: auto;        /* La imagen ocupa el 100% de la altura del carrusel */
   object-fit: contain;   /* La imagen cubre todo el espacio disponible sin distorsionarse */
+  display: block;
 }
 
 
@@ -214,15 +224,30 @@ footer a:hover {
   }
   
   #miCarrusel {
-    width: 100%;
+    width: 100% !important;
+    max-width: 100% !important;
     margin: 0;
     left: 0;
     transform: none;
+    overflow-x: hidden !important;
+  }
+  
+  .carousel-inner {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+  }
+  
+  .carousel-item {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
   }
   
   .carousel-img {
     height: auto;
-    width: 100%;
+    width: 100% !important;
+    max-width: 100% !important;
     object-fit: contain; 
   }
   .conocenos-img-peque {
@@ -300,7 +325,8 @@ footer a:hover {
 /* 2) Para tablets pequeñas (577px – 768px) */
 @media (min-width: 577px) and (max-width: 768px) {
   #miCarrusel {
-    width: 100vw;        
+    width: 100%;
+    max-width: 100%;
   }
   .carousel-img {
     height: auto;
@@ -337,7 +363,8 @@ footer a:hover {
 /* 3) Para pantallas medianas (769px – 991px) */
 @media (min-width: 769px) and (max-width: 991px) {
   #miCarrusel {
-    width: 100vw;        
+    width: 100%;
+    max-width: 100%;
   }
   .carousel-img {
     height: auto;
@@ -369,7 +396,8 @@ footer a:hover {
 /* 4) Para computadoras portátiles (992px a 1200px) */
 @media (min-width: 992px) and (max-width: 1200px) {
   #miCarrusel {
-    width: 100vw;        
+    width: 100%;
+    max-width: 100%;
   }
   .carousel-img {
     height: auto;
@@ -395,7 +423,8 @@ footer a:hover {
 /* 5) Para pantallas grandes (1201px+) */
 @media (min-width: 1201px) {
   #miCarrusel {
-    width: 100vw;        
+    width: 100%;
+    max-width: 100%;
   }
   .carousel-img {
     height: auto;

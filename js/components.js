@@ -46,9 +46,9 @@ function generateNavbar() {
 
   return `
     <nav class="navbar navbar-expand-lg navbar-dark navbar-oscuro sticky-top">
-      <div class="container">
+      <div class="container-fluid px-3 px-lg-5">
         <!-- Logo + Título a la izquierda -->
-        <a class="navbar-brand d-flex align-items-center" href="${indexLink}">
+        <a class="navbar-brand d-flex align-items-center me-auto" href="${indexLink}">
           <img
             src="${basePath}img/logo.png"
             alt="${CONFIG.logoAlt}"
@@ -73,7 +73,7 @@ function generateNavbar() {
 
         <!-- Ítems del menú -->
         <div class="collapse navbar-collapse" id="mainNavbar">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <ul class="navbar-nav ms-lg-auto mb-2 mb-lg-0">
             <li class="nav-item">
               <a class="nav-link ${isIndex ? 'active' : ''}" aria-current="${isIndex ? 'page' : ''}" href="${indexLink}">Inicio</a>
             </li>
