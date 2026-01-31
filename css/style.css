@@ -42,6 +42,33 @@
   box-shadow: none;
 }
 
+/* Pestaña activa: fondo blanco destacado */
+.navbar-oscuro .nav-link {
+  color: rgba(255, 255, 255, 0.9) !important;
+  border-radius: 6px;
+  padding: 0.5rem 1rem !important;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.navbar-oscuro .nav-link:hover {
+  color: #fff !important;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.navbar-oscuro .nav-link.active,
+.navbar-oscuro .navbar-nav .nav-link.active,
+.navbar-oscuro .nav-item .nav-link.active {
+  background: #fff !important;
+  color: #001a70 !important;
+  font-weight: 600;
+}
+
+.navbar-oscuro .nav-link.dropdown-toggle.active {
+  background: #fff !important;
+  color: #001a70 !important;
+  font-weight: 600;
+}
+
 /* Ajustes para móviles - reducir tamaño del logo y título */
 @media (max-width: 991.98px) {
   .navbar-oscuro .navbar-brand img {
@@ -432,5 +459,116 @@ footer a:hover {
   }
   .servicio-img {
     width: 80%;
+  }
+}
+
+/* ============================
+   Aliados (conocenos.html)
+   ============================ */
+.aliado-card {
+  height: 160px;
+  overflow: hidden;
+}
+
+.aliado-img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+/* ============================
+   Trabaja con nosotros (conocenos.html)
+   ============================ */
+.trabajaconnosotros-section {
+  background: #fff;
+}
+
+.trabajaconnosotros-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.35rem 1rem;
+  background: #001a70;
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 50px;
+  letter-spacing: 0.02em;
+}
+
+.trabajaconnosotros-text {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #495057;
+  text-align: justify;
+}
+
+.trabajaconnosotros-img-wrapper {
+  aspect-ratio: 4/3;
+  object-fit: cover;
+}
+
+.trabajaconnosotros-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.btn-postularse {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, #001a70 0%, #0033a0 100%);
+  color: white !important;
+  font-size: 1.15rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(0, 26, 112, 0.4);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.btn-postularse:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 26, 112, 0.5);
+  color: white !important;
+  background: linear-gradient(135deg, #002080 0%, #0044bb 100%);
+}
+
+.btn-postularse:active {
+  transform: translateY(-1px);
+}
+
+.btn-postularse-icon {
+  transition: transform 0.3s ease;
+}
+
+.btn-postularse:hover .btn-postularse-icon {
+  transform: translateX(4px);
+}
+
+@media (max-width: 991.98px) {
+  .trabajaconnosotros-img-wrapper {
+    max-height: 280px;
+    margin-bottom: 1rem;
+  }
+
+  .trabajaconnosotros-content {
+    text-align: center;
+  }
+
+  .trabajaconnosotros-badge {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .trabajaconnosotros-text {
+    text-align: center;
+  }
+
+  .btn-postularse {
+    margin: 0 auto;
   }
 }

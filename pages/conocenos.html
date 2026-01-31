@@ -38,7 +38,7 @@
   <link rel="stylesheet" href="../css/bootstrap.min.css" />
 
    <!-- 2) FontAwesome CSS local -->
-  <!-- Aquí enlazamos al all.min.css que está dentro de tu carpeta css/ -->
+  <!-- Enlace al all.min.css en la carpeta css/ -->
   <link rel="stylesheet" href="../css/all.min.css" />
   <link rel="stylesheet" href="../css/style.css">
 </head>
@@ -48,6 +48,7 @@
        ============================ -->
   <div id="navbar-container"></div>
 
+  <main>
 <!-- ============================
      SECCIÓN: Conócenos (versión modificada)
      ============================ -->
@@ -60,7 +61,7 @@
     <div class="row justify-content-center mb-4">
       <div class="col-lg-10">
         <div class="card h-100 shadow-sm">
-          <!-- Imagen en la parte superior (ajusta el src según tu carpeta) -->
+          <!-- Imagen en la parte superior -->
           <img
             src="../img/nh.png"
             class="card-img-top"
@@ -251,36 +252,47 @@ Hoy en día Oi ElectroGases sigue reinventándose pero manteniendo su esencia, p
 
 </section>
 
-
-
-<!-- =====================
-     CSS ADICIONAL (después de bootstrap.min.css)
-     ===================== -->
-<style>
-  /* Cada contenedor de logo tendrá 160px de altura fija */
-  .aliado-card {
-    height: 160px;
-    overflow: hidden; /* Evita que la imagen sobresalga */
-  }
-
-  /* La imagen se escala de forma proporcional hasta el 100% de la altura del contenedor */
-  .aliado-img {
-    max-height: 100%;
-    max-width: 100%;
-    object-fit: contain; /* Mantiene proporción completa */
-  }
-</style>
-
-
-    <!-- 4. “Trabaja con nosotros” (contenido pendiente) -->
-    <section id="trabajaConNosotros" class="py-5 bg-light">
+<!-- 4. Trabaja con nosotros -->
+<section id="trabajaConNosotros" class="py-5 trabajaconnosotros-section">
       <div class="container">
-        <h2 class="text-center fw-bold mb-4 titulo-grande">Trabaja con nosotros</h2>
-        <p class="text-center text-muted">
-          Pronto publicaremos nuestras vacantes y formas de aplicación.
-        </p>
+        <div class="row align-items-center g-4">
+          <!-- Columna imagen -->
+          <div class="col-lg-5 order-lg-2">
+            <div class="trabajaconnosotros-img-wrapper rounded-4 overflow-hidden shadow-lg">
+              <img
+                src="../img/nh.png"
+                alt="Equipo OI ELECTROGASES"
+                class="img-fluid"
+                loading="lazy"
+              />
+            </div>
+          </div>
+          <!-- Columna contenido -->
+          <div class="col-lg-7 order-lg-1">
+            <div class="trabajaconnosotros-content">
+              <span class="trabajaconnosotros-badge mb-3">
+                <i class="fas fa-users me-2"></i>Únete a nuestro equipo
+              </span>
+              <h2 class="fw-bold mb-4 titulo-grande">Trabaja con nosotros</h2>
+              <p class="trabajaconnosotros-text mb-4">
+                En OI ELECTROGASES buscamos personas comprometidas, con ganas de crecer y aportar su talento. 
+                Si tiene experiencia como técnico o desea formarse en el sector de revisiones de gas natural, 
+                queremos conocerlo. Complete el formulario y cuéntenos sobre usted.
+              </p>
+              <a
+                href="https://forms.gle/kBaefEDTsMYYNrGc6"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn-postularse"
+              >
+                <span class="btn-postularse-text">Postularse</span>
+                <i class="fas fa-arrow-right btn-postularse-icon"></i>
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
-    </section>
+</section>
   </main>
 
   <!-- =====================

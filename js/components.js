@@ -33,11 +33,15 @@ window.getBasePath = getBasePath;
  */
 function generateNavbar() {
   const basePath = getBasePath();
-  const currentPath = window.location.pathname;
-  const isIndex = currentPath.endsWith('/') || currentPath.endsWith('/index.html') || currentPath.endsWith('index.html');
-  const isConocenos = currentPath.includes('conocenos.html');
-  const isServicios = currentPath.includes('servicios.html');
-  const isMarcoLegal = currentPath.includes('marco_legal.html');
+  const pathname = (window.location.pathname || '').replace(/\\/g, '/');
+  const pathLower = pathname.toLowerCase();
+
+  const isIndex = pathname === '/' || pathname === '' || pathLower.endsWith('/index.html') || pathLower === '/index.html';
+  const isConocenos = pathLower.includes('conocenos');
+  const isServicios = pathLower.includes('servicios');
+  const isMarcoLegal = pathLower.includes('marco_legal');
+  const isPoliticaDatosJec = pathLower.includes('politica_datos_jec');
+  const isMasActive = isMarcoLegal || isPoliticaDatosJec;
 
   const indexLink = isIndex ? 'index.html' : `${basePath}index.html`;
   const conocenosLink = isConocenos ? 'conocenos.html' : `${basePath}pages/conocenos.html`;
@@ -85,7 +89,7 @@ function generateNavbar() {
             </li>
             <li class="nav-item dropdown">
               <a
-                class="nav-link dropdown-toggle ${isMarcoLegal ? 'active' : ''}"
+                class="nav-link dropdown-toggle ${isMasActive ? 'active' : ''}"
                 href="#"
                 id="navbarDropdown"
                 role="button"
