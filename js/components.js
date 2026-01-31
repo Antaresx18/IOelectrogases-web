@@ -9,7 +9,7 @@ const CONFIG = {
   siteNamePart1: 'OI ELECTRO',
   siteNamePart2: 'GASES',
   logoPath: 'img/logo.png', // Ruta relativa desde la raíz
-  logoAlt: 'IOELECTROGASES Logo',
+  logoAlt: 'OI ELECTROGASES Logo',
   currentPage: '', // Se establecerá dinámicamente
   basePath: '' // Se establecerá dinámicamente según la ubicación
 };
